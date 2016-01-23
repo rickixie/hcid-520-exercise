@@ -1,28 +1,46 @@
 body {
-  font-family: Helvetica, sans-serif;
+  font-family: 'Lato', sans-serif;
   margin: 0;
 }
 
 header {
-  padding: 10px;
-  border-bottom: 1px solid #ccc;
+    font-family: 'Raleway', sans-serif;
+    padding: 10px;
+    border-bottom: 1px solid #2c3e50;
+    background-color:#2c3e50;   
 }
 
 header h1 {
-  font-size: 18px;
-  margin: 0;
+    font-size: 18px;
+    font-weight:900;
+    margin: 0;
+    color:white;
+    padding-left: 4%;
 }
 
+header a {
+    text-decoration: none;
+    color:white;
+}
 nav {
   margin: 0;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #2c3e50;
   overflow: hidden;
+  background-color:#2c3e50; 
+    
+}
+nav a {
+    font-size:12px;
+    text-transform:uppercase;
+    text-decoration: none;
+    color:white;
 }
 
 nav ul {
   margin: 0;
-  padding: 10px;
-  font-size:12px;
+  padding: 10px; 
+  font-size: 12px;
+  /* change from 18px */
 }
 
 nav ul li {
@@ -31,15 +49,16 @@ nav ul li {
 
 section {
   padding: 10px;
-  font-size:12px;
-  overflow: hidden;
+  font-size:12px; /* change from 18px */
+  overflow: hidden;  /* use to act as clear */
+
 }
 
 footer {
   padding: 10px;
   border-top: 1px solid #ccc;
   font-size:12px;
-  overflow: hidden;
+  overflow: hidden; /* use to act as clear */
   /* clear: both; */
 }
 
@@ -54,4 +73,38 @@ p {
 .thumbnail img {
   max-width: 100%;
   max-height: 100%;
+  display: block; 
+  /* 
+  This is used because new line character created space, 
+  so there are 3 extra pixies created after the 
+  thumbnail in grid display.
+  http://stackoverflow.com/questions/11868905/space-at-bottom-of-div-containing-image
+  */
 }
+
+
+
+/* ADDED NEW CLASSES FOR STYLING */
+nav ul {
+    background-color:#2c3e50;
+}
+#contact {
+    background-color:#2c3e50;
+}
+
+#content #contact .links a {    
+    text-decoration: none;
+    color:white;
+}
+
+section {
+       background-color:white;
+}
+
+#about {
+    background-color:#18bc9c;
+}
+#about p {
+    color:white;
+}
+

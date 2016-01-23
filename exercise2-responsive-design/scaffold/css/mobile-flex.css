@@ -50,6 +50,8 @@ section {
 
 .links a {display: inline-block; margin-right: 10px;}
 
+/* fix this!!! */
+
 #projects {flex-wrap: wrap;}
 
 .project {border: 1px solid #ccc;width: calc(100% * (1/4) - 2px);}

@@ -21,8 +21,9 @@ header h1 {
 }
 
 header a {
-  float: right;margin-right: 30px;
-
+    float: right;
+  margin-right: 5px;
+  font-size: x-small;
 }
 
 header input {
@@ -62,6 +63,11 @@ float: left;width: 25%;display: inline-block;
 
 .links {
 float: right;display: inline-block;width: 66.3%;position: relative;top: 20px;
+}
+
+.links a {
+  display: inline-block; 
+  margin-right: 10px;
 }
 
 nav:after {

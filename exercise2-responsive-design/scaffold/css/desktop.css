@@ -1,0 +1,142 @@
+header {
+  /* To get you started, here's a hint: 
+       Header is a flex container, and the things inside it 
+       (h1, a, input) are flex items. 
+      Good luck! 
+  */
+  display: flex;
+  align-items: center;
+  padding-top: 3%;
+}
+
+header h1 {
+    flex: 2;
+    text-align: left;
+    font-size: 28px;
+    margin-left: 10px;
+}
+header h1:hover {
+    color:#18bc9c;
+    cursor:pointer; 
+}
+
+header input {
+    flex: 2;
+    height:inherit;   
+    display: none;
+}
+header nav {
+    flex: 3;
+    /* text-align: center; */
+}
+
+header a {
+    flex: 1;
+    text-align: center;
+    margin-right: 20px;
+    font-size: 14px;
+}
+
+
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0;
+}
+nav ul li a:hover{
+    color:#18bc9c;
+    cursor:pointer; 
+}
+
+.link a:hover{
+    color:#18bc9c;
+    cursor:pointer; 
+}
+nav ul li {padding: 0;}
+
+section {
+    display: flex;
+    flex-direction: column ;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Images can be a little unintuive to style in CSS. We recommend you
+   style the .thumbnail class to your desired dimensions. Rules in
+   base.css will ensure that the image fills the .thumbnail element.
+*/
+
+#contact {
+   
+}
+#contact .thumbnail {
+    width: 15%;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.links {
+ width: 100%;
+  text-align:center;margin-bottom: 15px;}
+
+.links a {   
+    margin-right: 10px;
+    font-size:14px;
+}
+
+/* fix this!!! */
+#about p {
+text-align: center;
+padding-left:10%;
+padding-right:10%;
+font-size:14px;margin-top: 8px;margin-bottom: 8px;}
+
+
+#projects {
+    display:flex;
+    flex-direction: column;
+    padding-top: 30px;
+}
+
+.project .thumbnail {
+ /* float:left;
+ width: 25%;
+    */
+ flex: 1;
+}
+
+.project {
+    width:80%;
+    border: 1px solid white;
+    display:flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding-bottom: 20px;
+}
+
+.description {
+    /* display:none; 
+    margin-left:30%;
+    */
+    flex: 3;
+    padding-left: 5%;
+}
+
+.description h1 {
+    font-family:'Raleway', sans-serif; 
+    text-transform:uppercase;
+    font-size:20px;
+    font-weight:900;
+    color:#18bc9c;
+}
+
+.description h2 {
+    font-family:'Raleway', sans-serif;
+    font-size:16px;
+    font-weight:700;
+}
+.description p {
+    font-family:'Lato', sans-serif; 
+    font-size:14px;
+    font-weight:500;
+}
