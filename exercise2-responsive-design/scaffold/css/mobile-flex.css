@@ -1,0 +1,57 @@
+header {
+  /* To get you started, here's a hint: 
+       Header is a flex container, and the things inside it 
+       (h1, a, input) are flex items. 
+      Good luck! 
+  */
+  display: flex;
+}
+
+header h1 {
+  flex: 4;
+}
+
+header input {
+  display: none;
+
+}
+
+header a {flex: 1;}
+
+nav ul {
+    flex-direction: row;
+    justify-content: flex-end;
+    display: flex;
+}
+
+nav ul li {
+    padding-left: 5px;
+}
+
+section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Images can be a little unintuive to style in CSS. We recommend you
+   style the .thumbnail class to your desired dimensions. Rules in
+   base.css will ensure that the image fills the .thumbnail element.
+*/
+#contact .thumbnail {
+    width: 25%;
+    padding-left: 2px;
+}
+
+.links {
+    width: 66.7%;
+    padding-right: 2px;
+}
+
+.links a {display: inline-block; margin-right: 10px;}
+
+#projects {flex-wrap: wrap;}
+
+.project {border: 1px solid #ccc;width: calc(100% * (1/4) - 2px);}
+
+.description {font-size: 0px;}

@@ -1,0 +1,57 @@
+body {
+  font-family: Helvetica, sans-serif;
+  margin: 0;
+}
+
+header {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+header h1 {
+  font-size: 18px;
+  margin: 0;
+}
+
+nav {
+  margin: 0;
+  border-bottom: 1px solid #ccc;
+  overflow: hidden;
+}
+
+nav ul {
+  margin: 0;
+  padding: 10px;
+  font-size:12px;
+}
+
+nav ul li {
+  list-style-type: none;
+}
+
+section {
+  padding: 10px;
+  font-size:12px;
+  overflow: hidden;
+}
+
+footer {
+  padding: 10px;
+  border-top: 1px solid #ccc;
+  font-size:12px;
+  overflow: hidden;
+  /* clear: both; */
+}
+
+p {
+  margin: 0;
+}
+
+/* Images can be a little unintuitive to style in CSS. We recommend you
+   style the .thumbnail class to your desired dimensions. These rules
+   ensure that the image will resize to fill the .thumbnail element.
+*/
+.thumbnail img {
+  max-width: 100%;
+  max-height: 100%;
+}

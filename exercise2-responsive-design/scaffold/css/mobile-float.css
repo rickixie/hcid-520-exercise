@@ -1,0 +1,90 @@
+/* In class, we described how floats must be cleared in order for subsequent
+   content to not wrap around it. Rather than litter our HTML file with
+   "clearing elements", which would make responsive design a little trickier
+   if you choose to use flexbox in desktop.css, we can instead use the :after
+   CSS pseudo-class. 
+
+   In essence, this CSS property adds a block element as the last child in
+   header. This element will have no content, but clears any floats that occur
+   _within_ the header. Feel free to reuse these properties to clear other floats
+   (e.g., nav:after to clear floats within the nav element).
+*/
+header:after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+header h1 {
+   float: left;
+
+}
+
+header a {
+  float: right;margin-right: 30px;
+
+}
+
+header input {
+  display: none;
+}
+
+nav ul {
+  float: right;
+  margin-right: 0px;
+}
+
+nav ul li {
+ /* 
+  padding-right: 10px;
+  margin-left: 0px;
+  */
+  margin-right: 10px;
+
+  display: inline;
+  
+}
+
+nav ul li:first-child {
+  /* Depending on your float layout, you may need to style the first nav
+     element here. This is what the :first-child CSS selector denotes.
+  */
+}
+
+/* Images can be a little unintuive to style in CSS. We recommend you
+   style the .thumbnail class to your desired dimensions. Rules in
+   base.css will ensure that the image fills the .thumbnail element.
+*/
+#contact .thumbnail {
+
+float: left;width: 25%;display: inline-block;
+}
+
+.links {
+float: right;display: inline-block;width: 66.3%;position: relative;top: 20px;
+}
+
+nav:after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+/*
+this is a new class
+*/
+
+.project {
+  float: left;
+  border: 1px solid #ccc;
+  width: calc(100% * (1/4) - 2px);
+}
+
+
+.description {
+font-size:0px;
+}
+
+footer {
+
+}
