@@ -1,0 +1,24 @@
+var ants = [
+  {x:0, y:0, c:'red'},
+  {x:0, y:0, c:'blue'},
+  {x:0, y:0, c:'green'}
+];
+var antSize = 5;//define the ant size by pixel
+
+function setup() {
+  createCanvas(windowWidth, windowHeight);
+  noStroke();
+  for (var i=0; i<ants.length; ++i) {
+    ants[i].x = windowWidth / 2;
+    ants[i].y = windowHeight / 2;
+  }
+}
+
+function draw() {
+  for (var i=0; i<ants.length; ++i) {
+    fill(ants[i].c);
+    rect(ants[i].x, ants[i].y, antSize, antSize);
+    ants[i].x += antSize * random(-1, 1);
+    ants[i].y += antSize * random(-1, 1);
+  }
+}

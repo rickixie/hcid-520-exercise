@@ -1,0 +1,37 @@
+var ants = [];
+var antSize = 1;
+
+function addAnt(x, y, r, g, b) {
+  ants.push({
+    x: x,
+    y: y,
+    c: 'rgb(' + r + ',' + g + ',' + b + ')'
+  });
+}
+
+function mouseMoved() {
+  var r = random() < 0.5 ? 200 : 0;
+  var g = random() < 0.5 ? 200 : 0;
+  var b = random() < 0.5 ? 200 : 0;
+  addAnt(mouseX, mouseY, r, g, b);
+}
+
+function setup() {
+  createCanvas(windowWidth, windowHeight);
+  noStroke();
+  addAnt(windowWidth/2, windowHeight/2, 255, 0, 0);
+}
+
+function draw() {
+  for (var i=0; i<ants.length; ++i) {
+    fill(ants[i].c);
+    rect(ants[i].x, ants[i].y, antSize, antSize);
+    ants[i].x += antSize * random(-1, 1);
+    ants[i].y += antSize * random(-1, 1);
+
+    if (ants[i].x < 0) ants[i].x += windowWidth;
+    if (ants[i].y < 0) ants[i].y += windowHeight;
+    ants[i].x = ants[i].x % windowWidth;
+    ants[i].y = ants[i].y % windowHeight;
+  }
+}

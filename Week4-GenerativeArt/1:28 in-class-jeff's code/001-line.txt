@@ -1,0 +1,42 @@
+function setup() {
+  createCanvas(windowWidth, windowHeight);
+  noFill();
+  noLoop();
+  stroke('rgba(20, 30, 160, 0.5)');
+}
+
+function draw() {
+  
+  if(frameCount%100===0){//every 100 frame, clear the screen
+    clear(); 
+  }
+ 
+  var r = floor(random(255));
+  var g = floor(random(255));  
+  var b = floor(random(255));
+  stroke('rgba('+r+','+g+','+b+',0.5)');
+  strokeWeight(random(5,50));
+
+  //Generate random number by give me a point between 0 and window width
+  var x1 = random(windowWidth);
+  //var x1 = random(10, windowWidth) 
+  //var x2 = random (10, windowWidth) 
+  //--> offset (10,10)
+  var x2 = random(windowWidth);
+  var y1 = random(windowHeight);
+  var y2 = random(windowHeight);
+  //console.log(x1,x2);
+ line(x1, y1, x2, y2);
+ 
+ 
+ //layering a white transparent on top of the draw()
+// if(frameCount%100 === 0){
+//"==" will translate the unit and check if they are equal
+//"===" take it as it is;
+  noStroke();
+  fill('rgba(255,255,255,0.1)');
+  rect(0,0, windowWidth, windowHeight)
+  noFill();
+// }
+ 
+}

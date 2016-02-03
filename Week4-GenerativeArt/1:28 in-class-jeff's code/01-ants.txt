@@ -1,0 +1,17 @@
+var x = 0;
+var y = 0;
+
+function setup() {
+  createCanvas(windowWidth, windowHeight);
+  fill('firebrick');
+  noStroke();
+  //in p5, it only load in setup();
+  x = windowWidth / 2;
+  y = windowHeight / 2;
+}
+
+function draw() {
+  rect(x, y, 1, 1);
+  x += random(-1, 1);
+  y += random(-1, 1);
+}

@@ -1,0 +1,26 @@
+var ants = [
+  //create a sequence/array of ants
+  //define a ant object with property x, y, c
+  {x:0, y:0, c:'red'},
+  {x:0, y:0, c:'blue'},
+  {x:0, y:0, c:'green'},
+ // {x:0, y:0, c:'yellow'}
+];
+
+function setup() {
+  createCanvas(windowWidth, windowHeight);
+  noStroke();
+  for (var i=0; i<ants.length; ++i) {
+    ants[i].x = windowWidth / 2;
+    ants[i].y = windowHeight / 2;
+  }
+}
+
+function draw() {
+  for (var i=0; i<ants.length; ++i) {
+    fill(ants[i].c);
+    rect(ants[i].x, ants[i].y, 1, 1);
+    ants[i].x += random(-1, 1);
+    ants[i].y += random(-1, 1);
+  }
+}
